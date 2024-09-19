@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+img {
+    max-width: 100%;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+li {
+    list-style: none;
+}
+button, input {
+    outline: none;
+}
+/* header qismi */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 1px gray;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    gap: 20px;
+    color: black;
+}
+.navbar__collection {
+    display: flex;
+    gap: 50px;
+    font-size: 17px;
+}
+.navbar__btn {
+    margin-left: 60px;
+    padding: 11px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #f6f8f9;
+    border: none;
+    cursor: pointer;
+}
+.navbar__btn:active {
+    transform: scale(.9);
+}
+.shopping-basket-header{
+    transform: scale(1.2);
+    animation:  infinite;
+    animation-duration: 1.5s;
+    animation-name: basketAnimation;
+}
+@keyframes basketAnimation {
+    0%{
+        transform: rotate(0deg);
+    }
+    /* 25%{
+        transform: rotate(90deg);
+        
+    }
+    50%{
+        transform: rotate(180deg);
+        
+    }
+    75%{
+        transform: rotate(270deg);
+
+    } */
+    100%{
+        transform: rotate(360deg);
+        
+    }
+}
+
+
+
+/* main qismi */
+.products {
+    background-color: #F6F8F9;
+}
+.products__department {
+    padding: 20px;
+    font-size: 40px;
+}  
+.wrapper {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    height: auto;
+}
+.card {
+    margin-top: 10px;
+    width: 300px;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+}
+.products__image {
+    width: 300px;
+    height: 200px;
+}
+.products__name {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+    width: 100%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.products__about {
+    margin: 20px;
+    color: gray;
+    font-weight: 500;
+    overflow: hidden;
+    line-height: 1.5em;    /* Har bir qatorning balandligi */
+    height: 4.5em;         /* 3 qator uchun balandlik */
+    max-height: 4.5em;     /* 3 qator uchun maksimal balandlik */
+    display: block;
+    text-overflow: ellipsis;
+}
+.products__narx {
+    margin: 20px;
+    color: #309B42;
+    font-weight: 800;
+}
+.products__btn {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    background-color: #F6F8F9;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .5s;
+}
+.products__btn:active {
+    transform: scale(.9);
+}
